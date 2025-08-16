@@ -635,7 +635,7 @@
                     <div id="carousel-item-2" class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="p-8 apple-scale">
                             <h4 class="font-semibold text-primary mb-3 text-lg">
-                                ParAlleL: A Novel Population-Based Approach to Biological Logic Gates
+                                <a href="https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2019.00046/full" target="_blank">ParAlleL: A Novel Population-Based Approach to Biological Logic Gates</a>
                             </h4>
                             <p class="text-text-secondary text-sm mb-3 font-medium">
                                 Frontiers in Bioengeneering and Biotechnology • 2019
@@ -649,7 +649,7 @@
                     <div id="carousel-item-3" class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="p-8 apple-scale">
                             <h4 class="font-semibold text-primary mb-3 text-lg">
-                                Unintentional Genomic Changes Endow <i>Cupriavidus metallidurans</i> with an Augmented Heavy-Metal Resistance
+                                <a href="https://www.mdpi.com/2073-4425/9/11/551" target="_blank">Unintentional Genomic Changes Endow <i>Cupriavidus metallidurans</i> with an Augmented Heavy-Metal Resistance</a>
                             </h4>
                             <p class="text-text-secondary text-sm mb-3 font-medium">
                                 Genes • 2018
@@ -659,12 +659,42 @@
                             </p>
                         </div>
                     </div>
+                <!-- Publication 4 -->
+                    <div id="carousel-item-4" class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="p-8 apple-scale">
+                            <h4 class="font-semibold text-primary mb-3 text-lg">
+                                <a href="https://www.mdpi.com/2076-2607/10/2/484" target="_blank"><i>Cupriavidus metallidurans</i> CH34 Possesses Aromatic Catabolic Versatility and Degrades Benzene in the Presence of Mercury and Cadmium </a>
+                            </h4>
+                            <p class="text-text-secondary text-sm mb-3 font-medium">
+                                Microorganisms • 2022
+                            </p>
+                            <p class="text-text-secondary">
+                                This study showed that C. metallidurans CH34 degraded benzene in the presence of Hg (II) or Cd (II).
+                            </p>
+                        </div>
+                    </div>
+                     <!-- Publication 5 -->
+                    <div id="carousel-item-4" class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="p-8 apple-scale">
+                            <h4 class="font-semibold text-primary mb-3 text-lg">
+                                <a href="https://www.biorxiv.org/content/10.1101/826230v2" target="_blank">TXO: Transcription-Only genetic circuits as a novel cell-free approach for Synthetic Biology</a>
+                            </h4>
+                            <p class="text-text-secondary text-sm mb-3 font-medium">
+                                bioRxiv • 2019
+                            </p>
+                            <p class="text-text-secondary">
+                                Here we present TXO, transcription-only genetic circuits, independent of translation or post-translation maturation. RNA aptamers are used as reaction output allowing the generation of fast, reliable and simple-to-design transcriptional units.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <!-- Slider indicators -->
                 <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
                     <button id="carousel-indicator-1" type="button" class="w-3 h-3 rounded-full bg-primary" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
                     <button id="carousel-indicator-2" type="button" class="w-3 h-3 rounded-full bg-primary" aria-current="true" aria-label="Slide 2" data-carousel-slide-to="1"></button>
                     <button id="carousel-indicator-3" type="button" class="w-3 h-3 rounded-full bg-primary" aria-current="true" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                    <button id="carousel-indicator-4" type="button" class="w-3 h-3 rounded-full bg-primary" aria-current="true" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                    <button id="carousel-indicator-5" type="button" class="w-3 h-3 rounded-full bg-primary" aria-current="true" aria-label="Slide 5" data-carousel-slide-to="4"></button>
                 </div>
                 <!-- Slider controls -->
                 <button id="data-carousel-prev" type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-5 cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -1026,12 +1056,16 @@
     const carouselItems = [
         document.getElementById('carousel-item-1'),
         document.getElementById('carousel-item-2'),
-        document.getElementById('carousel-item-3')
+        document.getElementById('carousel-item-3'),
+        document.getElementById('carousel-item-4'),
+        document.getElementById('carousel-item-5')
     ];
     const indicators = [
         document.getElementById('carousel-indicator-1'),
         document.getElementById('carousel-indicator-2'),
-        document.getElementById('carousel-indicator-3')
+        document.getElementById('carousel-indicator-3'),
+        document.getElementById('carousel-indicator-4'),
+        document.getElementById('carousel-indicator-5')
     ];
     let currentSlide = 0;
     let carouselInterval = null;
