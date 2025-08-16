@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Apple-inspired Primary Colors - Space Gray & Pure White */
+  --color-primary: #1D1D1F; /* Apple Deep Space Gray */
+  --color-primary-50: #FFFFFF; /* Pure White */
+  --color-primary-100: #F5F5F7; /* Apple Light Gray */
+  --color-primary-200: #E8E8ED; /* Apple Border Gray */
+  --color-primary-300: #D2D2D7; /* Apple Medium Light Gray */
+  --color-primary-400: #A1A1A6; /* Apple Medium Gray */
+  --color-primary-500: #86868B; /* Apple Text Secondary */
+  --color-primary-600: #6E6E73; /* Apple Dark Secondary */
+  --color-primary-700: #515154; /* Apple Darker Gray */
+  --color-primary-800: #2C2C2E; /* Apple Dark Gray */
+  --color-primary-900: #1D1D1F; /* Apple Deep Space Gray */
+  
+  /* Apple Blue Accent */
+  --color-secondary: #007AFF; /* Apple Blue */
+  --color-secondary-50: #E6F3FF; /* Light Apple Blue */
+  --color-secondary-100: #CCE7FF; /* Lighter Apple Blue */
+  --color-secondary-500: #007AFF; /* Apple Blue */
+  --color-secondary-600: #0056CC; /* Darker Apple Blue */
+  --color-secondary-700: #004499; /* Deep Apple Blue */
+  
+  /* Refined Accent Colors */
+  --color-accent: #007AFF; /* Apple Blue */
+  --color-accent-50: #E6F3FF; /* Light Apple Blue */
+  --color-accent-100: #CCE7FF; /* Lighter Apple Blue */
+  --color-accent-400: #339FFF; /* Medium Apple Blue */
+  --color-accent-500: #007AFF; /* Apple Blue */
+  --color-accent-600: #0056CC; /* Darker Apple Blue */
+  
+  /* Apple Background System */
+  --color-background: #FFFFFF; /* Pure White */
+  --color-surface: #F5F5F7; /* Apple Light Gray Background */
+  --color-surface-100: #F2F2F7; /* Apple System Light */
+  --color-surface-secondary: #FAFAFA; /* Apple Secondary Background */
+  
+  /* Apple Text System */
+  --color-text-primary: #1D1D1F; /* Apple Deep Space Gray */
+  --color-text-secondary: #86868B; /* Apple Secondary Text */
+  --color-text-muted: #A1A1A6; /* Apple Tertiary Text */
+  --color-text-light: #FFFFFF; /* Pure White Text */
+  
+  /* Apple Status Colors */
+  --color-success: #30D158; /* Apple Green */
+  --color-success-50: #E8F7ED; /* Light Apple Green */
+  --color-success-100: #D1EFDA; /* Lighter Apple Green */
+  --color-success-500: #30D158; /* Apple Green */
+  
+  --color-warning: #FF9F0A; /* Apple Orange */
+  --color-warning-50: #FFF4E6; /* Light Apple Orange */
+  --color-warning-100: #FFE9CC; /* Lighter Apple Orange */
+  
+  --color-error: #FF453A; /* Apple Red */
+  --color-error-50: #FFE8E6; /* Light Apple Red */
+  --color-error-100: #FFD1CC; /* Lighter Apple Red */
+  --color-error-500: #FF453A; /* Apple Red */
+  
+  /* Apple Border System */
+  --color-border: #D2D2D7; /* Apple Separator */
+  --color-border-light: #E8E8ED; /* Apple Light Separator */
+  
+  /* Apple Shadow System */
+  --shadow-sm: 0 1px 3px 0 rgba(29, 29, 31, 0.1);
+  --shadow-md: 0 4px 16px 0 rgba(29, 29, 31, 0.12);
+  --shadow-lg: 0 8px 32px 0 rgba(29, 29, 31, 0.16);
+  --shadow-xl: 0 16px 48px 0 rgba(29, 29, 31, 0.2);
+  --shadow-credential: 0 2px 8px 0 rgba(29, 29, 31, 0.08);
+  --shadow-cta: 0 4px 24px 0 rgba(0, 122, 255, 0.2);
+  
+  /* Apple Gradient System */
+  --gradient-hero: linear-gradient(135deg, #FFFFFF 0%, #F5F5F7 100%);
+  --gradient-surface: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
+  --gradient-accent: linear-gradient(135deg, #007AFF 0%, #0056CC 100%);
+}
+
+/* Apple-inspired Base Styles */
+@layer base {
+  body {
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    letter-spacing: -0.003em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+    letter-spacing: -0.022em;
+  }
+  
+  .font-display {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.022em;
+  }
+  
+  .font-body {
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.003em;
+  }
+}
+
+/* Apple-inspired Component Styles */
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 ease-out;
+    @apply hover:bg-primary-800 hover:shadow-cta hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    background: var(--gradient-accent);
+    border: 1px solid transparent;
+    font-family: 'SF Pro Text', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-cta);
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-primary font-medium py-4 px-8 rounded-xl transition-all duration-300 ease-out;
+    @apply hover:bg-primary-100 hover:shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2;
+    border: 1px solid var(--color-border);
+    font-family: 'SF Pro Text', sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary-300);
+  }
+.btn-accent  {
+    @apply bg-accent text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 ease-out;
+    @apply hover:bg-accent-600 hover:shadow-cta hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    background: var(--gradient-accent);
+    font-family: 'SF Pro Text', sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  .btn-accent:hover {
+    transform: translateY(-2px);
+  }
+  
+  .card-credential {
+    @apply bg-white rounded-2xl p-8 border border-border-light;
+    box-shadow: var(--shadow-credential);
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease-out;
+  }
+  
+  .card-credential:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-4 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500;
+    @apply transition-all duration-300 ease-out bg-surface-100;
+    font-family: 'SF Pro Text', sans-serif;
+    letter-spacing: -0.003em;
+  }
+  
+  .form-input:focus {
+    background-color: var(--color-background);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .section-surface {
+    background: var(--gradient-surface);
+  }
+  
+  .apple-glass {
+    backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .apple-card {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-credential);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .apple-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* Apple-inspired Utility Classes */
+@layer utilities {
+  .text-display {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.022em;
+  }
+  
+  .text-body {
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.003em;
+  }
+  
+  .shadow-credential {
+    box-shadow: var(--shadow-credential);
+  }
+  
+  .shadow-cta {
+    box-shadow: var(--shadow-cta);
+  }
+  
+  .shadow-apple {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .transition-250 {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-apple {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-surface {
+    background: var(--gradient-surface);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .apple-blur {
+    backdrop-filter: blur(20px) saturate(180%);
+  }
+  
+  .apple-scale {
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .apple-scale:hover {
+    transform: scale(1.05);
+  }
+}
